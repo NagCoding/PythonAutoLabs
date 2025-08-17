@@ -1,0 +1,22 @@
+common:
+  env_url: "https://sit-api.t2scdn.com"
+  app_name: "FRANCHISE"
+  franchise: "sit-foodhub-uk.stage.t2sonline.com"
+  headers:
+    Content-Type: "application/json"
+
+
+
+sit:
+  env_url: "https://sit-api.t2scdn.com"
+  headers:
+    Content-Type: "application/json"
+  app_name: "FRANCHISE"
+  franchise: "sit-foodhub-uk.stage.t2sonline.com"
+
+preprod:
+  env_url: "https://api-preprod.t2sonline.com"
+  headers:
+    Content-Type: "application/json"
+  app_name: "FRANCHISE"
+  franchise: "preprod-foodhub-uk.t2sonline.com"
