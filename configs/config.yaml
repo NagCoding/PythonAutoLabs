@@ -2,21 +2,33 @@ common:
   env_url: "https://sit-api.t2scdn.com"
   app_name: "FRANCHISE"
   franchise: "sit-foodhub-uk.stage.t2sonline.com"
+  store: "8955411"
   headers:
-    Content-Type: "application/json"
+    content-type: "application/json"
+    accept: "application/json, text/plain, */*"
+    accept-language : "en-GB,en-US;q=0.9,en;q=0.8"
+    api-token : "J6WDf0ttQKGfYhQkRCjwraBS11JYuIDx"
 
 
 
 sit:
   env_url: "https://sit-api.t2scdn.com"
-  headers:
-    Content-Type: "application/json"
   app_name: "FRANCHISE"
+  store: "8955411"
   franchise: "sit-foodhub-uk.stage.t2sonline.com"
+  headers:
+    content-type: "application/json"
+    accept: "application/json, text/plain, */*"
+    accept-language: "en-GB,en-US;q=0.9,en;q=0.8"
+    api-token: "J6WDf0ttQKGfYhQkRCjwraBS11JYuIDx"
 
 preprod:
   env_url: "https://api-preprod.t2sonline.com"
-  headers:
-    Content-Type: "application/json"
   app_name: "FRANCHISE"
   franchise: "preprod-foodhub-uk.t2sonline.com"
+  store: "8955411"
+  headers:
+    content-type: "application/json"
+    accept: "application/json, text/plain, */*"
+    accept-language: "en-GB,en-US;q=0.9,en;q=0.8"
+    api-token: "J6WDf0ttQKGfYhQkRCjwraBS11JYuIDx"

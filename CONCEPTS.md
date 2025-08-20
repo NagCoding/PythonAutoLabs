@@ -60,3 +60,34 @@
    2.  pip freeze > requirements.txt
    3. This can be automatically done , but for now try manual for learning
    
+5. # JSON Handling :
+   1. There are two ways to handle json : Direct Dictionary & JSONPath
+   2. Direct Dictionary concept used for simpler JSONs
+   3. JSONPath can be used for complex JSONs
+   4. ### Direct Dictionary Access :
+      1. The response becomes a python dictionary if we do json_res = response.json()
+         2. Example : { "outcome": "success",
+                        "data": {
+                                "token_type": "Bearer",
+                                "access_token": "abc123",
+                                "access_expires_in": 28800
+                                }
+                        }
+         3. We can access the values using .get()
+         4. outcome = json_res.get("outcome")
+         5. access_token = json_res.get("data", {}).get("access_token")
+         6. json_res.get("data", {}) safely returns data object, if data missing it will return empty object {}
+         7. .get("access_token") then fetches the access_token from data object
+         8. If no data is exists, it will return None instead of error
+         9. So, in this example, Nested JSON = Nested Dictionary, so the .get continues accordingly
+         10. If JSON objects have lists or array of objects, use below
+         11. Example Json : resp_json = {"users": [
+                                               {"id": 1, "name": "Nag"},
+                                               {"id": 2, "name": "Babu"}
+                                                  ]
+                                        }
+         12. second_user_name = resp_json.get("users", [])[1].get("name") if len(resp_json.get("users", [])) > 1 else None
+         13. Always use If else to avoid Index error if data is missing
+         14. Exmpl : if len(resp_json.get("users", [])) > 1 else None
+   5. ### JSONPath Access :
+   

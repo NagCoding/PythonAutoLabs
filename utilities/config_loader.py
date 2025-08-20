@@ -55,4 +55,8 @@ class Config:
     def passport(self):
         return os.getenv("PASSPORT") #from .env
 
+    @property
+    def store(self):
+        return self.data[self.env]["store"]
+
 
