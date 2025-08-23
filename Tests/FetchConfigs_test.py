@@ -5,6 +5,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 def test_get_store(config):
+    logger.info(f"FetchConfigs started running..")
     url = f"{config.env_url}/consumer/store"
     headers = config.headers.copy() # copy to avoid modifying global config
     headers["franchise"]= config.franchise
@@ -15,4 +16,5 @@ def test_get_store(config):
     store_res = requests.get(url, params=params, headers= headers)
     logger.info(f"API response status code is - {store_res.status_code}")
     assert store_res.status_code == 200
+    logger.info(f"FetchConfigs executed..")
 

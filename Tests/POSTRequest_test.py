@@ -1,10 +1,10 @@
 import requests
 import logging
 
-
 logger = logging.getLogger(__name__)
 
-def test_oauthtoken_test(config):
+def test_oauthtoken(config):
+    logger.info(f"POSTRequest started running..")
     url = f"{config.env_url}/oauth/client"
     headers = config.headers.copy()
     body = {
@@ -19,13 +19,17 @@ def test_oauthtoken_test(config):
     response = requests.post(url,json=body,headers=headers)
     assert response.status_code == 200
     logger.info(f"Oauth API response status code is - {response.status_code}")
-    logger.info(response.headers)
+    #logger.info(response.headers)
 
     json_response = response.json()
-    logger.info(f"The Oauth response is : {json_response}")
+    #logger.info(f"The Oauth response is : {json_response}")
 
     oauth_access_token = json_response.get("data",{}).get("access_token")
     logger.info(f"Access Token is -: {oauth_access_token}")
+    return oauth_access_token
+
+logger.info(f"POSTRequest executed..")
+
 
 
 
