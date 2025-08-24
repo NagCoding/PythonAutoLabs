@@ -8,6 +8,7 @@ common:
     accept: "application/json, text/plain, */*"
     accept-language : "en-GB,en-US;q=0.9,en;q=0.8"
     api-token : "J6WDf0ttQKGfYhQkRCjwraBS11JYuIDx"
+  store_api_token: "583b695a9e6a835a1f05bcd84e792eaf"
 
 
 
@@ -21,6 +22,7 @@ sit:
     accept: "application/json, text/plain, */*"
     accept-language: "en-GB,en-US;q=0.9,en;q=0.8"
     api-token: "J6WDf0ttQKGfYhQkRCjwraBS11JYuIDx"
+  store_api_token: "583b695a9e6a835a1f05bcd84e792eaf"
 
 preprod:
   env_url: "https://api-preprod.t2sonline.com"
@@ -32,3 +34,4 @@ preprod:
     accept: "application/json, text/plain, */*"
     accept-language: "en-GB,en-US;q=0.9,en;q=0.8"
     api-token: "J6WDf0ttQKGfYhQkRCjwraBS11JYuIDx"
+  store_api_token: ""

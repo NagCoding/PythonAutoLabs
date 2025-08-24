@@ -59,4 +59,8 @@ class Config:
     def store(self):
         return self.data[self.env]["store"]
 
+    @property
+    def store_api_token(self):
+        return self.data[self.env]["store_api_token"]
+
 
